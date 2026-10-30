@@ -1,0 +1,63 @@
+====================================================================================================
+PER SEED (3 runs, same data, same settings; only the seed differs)
+====================================================================================================
+seed                                   1       2       3
+AUC (all)                         0.9377  0.9348  0.8439
+AUC worst file                    0.7432  0.7312  0.3561
+AUC Gafgyt tcp                    0.7433  0.7312  0.3561
+AUC Gafgyt udp                    0.7432  0.7312  0.3561
+[FL pooled 1%] FPR                0.0197  0.0200  0.0230
+[FL pooled 1%] recall             0.7576  0.7576  0.7576
+[FL pooled 1%] precision          0.9964  0.9963  0.9958
+[FL pooled 1%] F1                 0.8607  0.8607  0.8605
+[FL pooled 1%] balanced acc       0.8690  0.8688  0.8673
+[FL pooled 1%] worst-file recall  0.0002  0.0001  0.0001
+[FL max 1%] FPR                   0.0117  0.0117  0.0105
+[FL max 1%] recall                0.7576  0.7576  0.7576
+[FL max 1%] precision             0.9978  0.9978  0.9981
+[FL max 1%] F1                    0.8613  0.8613  0.8614
+[FL max 1%] balanced acc          0.8729  0.8729  0.8735
+[FL max 1%] worst-file recall     0.0001  0.0000  0.0001
+[window 50] FPR                   0.0059  0.0054  0.0054
+[window 50] recall                1.0000  1.0000  1.0000
+[window 50] worst-file recall     1.0000  1.0000  1.0000
+[window 100] FPR                  0.0189  0.0171  0.0144
+[window 100] recall               1.0000  1.0000  1.0000
+[window 100] worst-file recall    1.0000  1.0000  1.0000
+[window 200] FPR                  0.0127  0.0163  0.0090
+[window 200] recall               1.0000  1.0000  1.0000
+[window 200] worst-file recall    1.0000  1.0000  1.0000
+comm total MB                    24.7546 24.7546 24.7546
+
+====================================================================================================
+MEAN / STD / MIN / MAX
+====================================================================================================
+                                    mean    std     min     max
+AUC (all)                         0.9055 0.0534  0.8439  0.9377
+AUC worst file                    0.6102 0.2201  0.3561  0.7432
+AUC Gafgyt tcp                    0.6102 0.2201  0.3561  0.7433
+AUC Gafgyt udp                    0.6102 0.2201  0.3561  0.7432
+[FL pooled 1%] FPR                0.0209 0.0018  0.0197  0.0230
+[FL pooled 1%] recall             0.7576 0.0000  0.7576  0.7576
+[FL pooled 1%] precision          0.9961 0.0003  0.9958  0.9964
+[FL pooled 1%] F1                 0.8607 0.0001  0.8605  0.8607
+[FL pooled 1%] balanced acc       0.8683 0.0009  0.8673  0.8690
+[FL pooled 1%] worst-file recall  0.0002 0.0000  0.0001  0.0002
+[FL max 1%] FPR                   0.0113 0.0007  0.0105  0.0117
+[FL max 1%] recall                0.7576 0.0000  0.7576  0.7576
+[FL max 1%] precision             0.9979 0.0001  0.9978  0.9981
+[FL max 1%] F1                    0.8613 0.0001  0.8613  0.8614
+[FL max 1%] balanced acc          0.8731 0.0004  0.8729  0.8735
+[FL max 1%] worst-file recall     0.0001 0.0000  0.0000  0.0001
+[window 50] FPR                   0.0056 0.0003  0.0054  0.0059
+[window 50] recall                1.0000 0.0000  1.0000  1.0000
+[window 50] worst-file recall     1.0000 0.0000  1.0000  1.0000
+[window 100] FPR                  0.0168 0.0023  0.0144  0.0189
+[window 100] recall               1.0000 0.0000  1.0000  1.0000
+[window 100] worst-file recall    1.0000 0.0000  1.0000  1.0000
+[window 200] FPR                  0.0127 0.0036  0.0090  0.0163
+[window 200] recall               1.0000 0.0000  1.0000  1.0000
+[window 200] worst-file recall    1.0000 0.0000  1.0000  1.0000
+comm total MB                    24.7546 0.0000 24.7546 24.7546
+
+n = 3 seeds: report mean and std together with the range; a std from 3 runs is itself noisy.

@@ -1,0 +1,42 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+.env/
+*/.venv/
+*/*/.venv/
+**/site-packages/
+
+# Datasets and Large Archives
+Datasets/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+**/attacks/
+**/normal/
+**/fl-mnist/data/
+**/data/MNIST/
+
+# Preprocessed Large Binary / Numerical Data
+*.npy
+*.npz
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs
+*.log

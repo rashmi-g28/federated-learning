@@ -1,0 +1,46 @@
+Device,Model,Accuracy,Precision,Recall,F1,Balanced Accuracy
+Danmini_Doorbell,Decision Tree,100.0,100.0,100.0,100.0,100.0
+Danmini_Doorbell,Random Forest,100.0,100.0,100.0,100.0,100.0
+Danmini_Doorbell,KNN,99.95,100.0,99.9,99.95,99.95
+Danmini_Doorbell,SVM,99.9,99.9,99.9,99.9,99.9
+Danmini_Doorbell,XGBoost,100.0,100.0,100.0,100.0,100.0
+Ecobee_Thermostat,Decision Tree,100.0,100.0,100.0,100.0,100.0
+Ecobee_Thermostat,Random Forest,100.0,100.0,100.0,100.0,100.0
+Ecobee_Thermostat,KNN,99.95,100.0,99.9,99.95,99.95
+Ecobee_Thermostat,SVM,99.95,99.9001,100.0,99.95,99.95
+Ecobee_Thermostat,XGBoost,100.0,100.0,100.0,100.0,100.0
+Ennio_Doorbell,Decision Tree,100.0,100.0,100.0,100.0,100.0
+Ennio_Doorbell,Random Forest,100.0,100.0,100.0,100.0,100.0
+Ennio_Doorbell,KNN,99.95,100.0,99.9,99.95,99.95
+Ennio_Doorbell,SVM,100.0,100.0,100.0,100.0,100.0
+Ennio_Doorbell,XGBoost,100.0,100.0,100.0,100.0,100.0
+Philips_B120N10_Baby_Monitor,Decision Tree,100.0,100.0,100.0,100.0,100.0
+Philips_B120N10_Baby_Monitor,Random Forest,100.0,100.0,100.0,100.0,100.0
+Philips_B120N10_Baby_Monitor,KNN,99.9,99.9,99.9,99.9,99.9
+Philips_B120N10_Baby_Monitor,SVM,99.9,99.9,99.9,99.9,99.9
+Philips_B120N10_Baby_Monitor,XGBoost,100.0,100.0,100.0,100.0,100.0
+Provision_PT_737E_Security_Camera,Decision Tree,100.0,100.0,100.0,100.0,100.0
+Provision_PT_737E_Security_Camera,Random Forest,100.0,100.0,100.0,100.0,100.0
+Provision_PT_737E_Security_Camera,KNN,99.75,99.6012,99.9,99.7504,99.75
+Provision_PT_737E_Security_Camera,SVM,99.75,99.6012,99.9,99.7504,99.75
+Provision_PT_737E_Security_Camera,XGBoost,100.0,100.0,100.0,100.0,100.0
+Provision_PT_838_Security_Camera,Decision Tree,100.0,100.0,100.0,100.0,100.0
+Provision_PT_838_Security_Camera,Random Forest,100.0,100.0,100.0,100.0,100.0
+Provision_PT_838_Security_Camera,KNN,99.7,99.502,99.9,99.7006,99.7
+Provision_PT_838_Security_Camera,SVM,99.7,99.502,99.9,99.7006,99.7
+Provision_PT_838_Security_Camera,XGBoost,100.0,100.0,100.0,100.0,100.0
+Samsung_SNH_1011_N_Webcam,Decision Tree,100.0,100.0,100.0,100.0,100.0
+Samsung_SNH_1011_N_Webcam,Random Forest,100.0,100.0,100.0,100.0,100.0
+Samsung_SNH_1011_N_Webcam,KNN,99.95,100.0,99.9,99.95,99.95
+Samsung_SNH_1011_N_Webcam,SVM,100.0,100.0,100.0,100.0,100.0
+Samsung_SNH_1011_N_Webcam,XGBoost,99.95,100.0,99.9,99.95,99.95
+SimpleHome_XCS7_1002_WHT_Security_Camera,Decision Tree,100.0,100.0,100.0,100.0,100.0
+SimpleHome_XCS7_1002_WHT_Security_Camera,Random Forest,100.0,100.0,100.0,100.0,100.0
+SimpleHome_XCS7_1002_WHT_Security_Camera,KNN,99.95,100.0,99.9,99.95,99.95
+SimpleHome_XCS7_1002_WHT_Security_Camera,SVM,100.0,100.0,100.0,100.0,100.0
+SimpleHome_XCS7_1002_WHT_Security_Camera,XGBoost,100.0,100.0,100.0,100.0,100.0
+SimpleHome_XCS7_1003_WHT_Security_Camera,Decision Tree,100.0,100.0,100.0,100.0,100.0
+SimpleHome_XCS7_1003_WHT_Security_Camera,Random Forest,100.0,100.0,100.0,100.0,100.0
+SimpleHome_XCS7_1003_WHT_Security_Camera,KNN,99.95,100.0,99.9,99.95,99.95
+SimpleHome_XCS7_1003_WHT_Security_Camera,SVM,100.0,100.0,100.0,100.0,100.0
+SimpleHome_XCS7_1003_WHT_Security_Camera,XGBoost,100.0,100.0,100.0,100.0,100.0

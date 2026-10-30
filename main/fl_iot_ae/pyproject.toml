@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fl-iot-ae"
+version = "0.1.0"
+description = "Lightweight federated autoencoder (variant 3C, 115-32-6-32-115) for IoT botnet anomaly detection on N-BaIoT, with Flower"
+license = {file = "LICENSE"}
+dependencies = [
+    "flwr[simulation]>=1.39.0",
+    "torch>=2.2",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["fl_iot_ae"]
+
+[tool.flwr.app]
+publisher = "student"
+fab-format-version = 1
+flwr-version-target = "1.39.0"
+
+[tool.flwr.app.components]
+serverapp = "fl_iot_ae.server_app:app"
+clientapp = "fl_iot_ae.client_app:app"
+
+[tool.flwr.app.config]
+num-server-rounds = 40
+local-epochs = 3
+batch-size = 512
+learning-rate = 0.001
+eval-every = 5
+seed = 42
+# filled in automatically by prepare_partitions.py (absolute paths) -- leave empty until you run it
+data-dir = "C:/Users/Rashmi Gaonkar/Desktop/major-1/main/fl_data"
+results-dir = "C:/Users/Rashmi Gaonkar/Desktop/major-1/main/fl_iot_ae/results"

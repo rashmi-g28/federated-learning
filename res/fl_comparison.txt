@@ -1,0 +1,46 @@
+====================================================================================================
+DETECTION: federated vs centralized vs local-only (same data, same scaler, same hold-out)
+====================================================================================================
+
+False-alarm budget 1%
+                        method    fpr  recall  precision     f1  accuracy  balanced_acc  worst_file_recall    auc note
+Federated (FedAvg, pooled thr) 0.0178  0.7576     0.9967 0.8609    0.7852        0.8699             0.0001 0.8099     
+  Federated (strict 'max' thr) 0.0122  0.7576     0.9977 0.8612    0.7859        0.8727             0.0001 0.8099     
+
+False-alarm budget 0.5%
+                        method    fpr  recall  precision     f1  accuracy  balanced_acc  worst_file_recall    auc note
+Federated (FedAvg, pooled thr) 0.0122  0.7576     0.9977 0.8612    0.7859        0.8727             0.0001 0.8099     
+  Federated (strict 'max' thr) 0.0105  0.7576     0.9981 0.8613    0.7861        0.8735             0.0001 0.8099     
+
+False-alarm budget 0.2%
+                        method    fpr  recall  precision     f1  accuracy  balanced_acc  worst_file_recall    auc note
+Federated (FedAvg, pooled thr) 0.0106  0.7576     0.9980 0.8613    0.7861        0.8735             0.0001 0.8099     
+  Federated (strict 'max' thr) 0.0071  0.7576     0.9987 0.8616    0.7865        0.8752             0.0000 0.8099     
+
+False-alarm budget 0.1%
+                        method    fpr  recall  precision     f1  accuracy  balanced_acc  worst_file_recall    auc note
+Federated (FedAvg, pooled thr) 0.0099  0.7576     0.9982 0.8614    0.7862        0.8738             0.0000 0.8099     
+  Federated (strict 'max' thr) 0.0070  0.7576     0.9987 0.8616    0.7865        0.8753             0.0000 0.8099     
+
+Note: the test set is ~88% attack records, so plain accuracy is flattered by recall; use balanced_acc / F1 / worst_file_recall.
+
+====================================================================================================
+WINDOW-LEVEL RULE (federated, strict 'max' cutoffs; unit = window of W consecutive records)
+====================================================================================================
+    W repeat-rule FPR  RE-rule FPR   any FPR  recall any  worst file   tau_rep     tau_re
+   50          0.0000       0.0059    0.0059      1.0000      1.0000     0.040   8.83e-03
+  100          0.0018       0.0135    0.0153      1.0000      1.0000     0.030   3.85e-03
+  200          0.0000       0.0127    0.0127      1.0000      1.0000     0.035   3.44e-03
+Per-record recall (above) and window recall are different units; report both and label them.
+
+====================================================================================================
+EFFICIENCY (Objective 3: communication / computation)
+====================================================================================================
+Model                     : 3C 115-32-6-32-115  |  7,929 parameters  |  7,744 MACs / record
+Model payload             : 32.1 KB  (one upload or one download)
+Per client per round      : 33.9 KB down + 32.1 KB up
+Whole FL run              : 24.75 MB  (9 clients x 40 rounds, scaler round 18.7 KB, calibration round 392.5 KB)
+Raw data sent to server   : 0 bytes (only weights, min/max, error histograms)
+Client train time / round : mean 4.59 s, max 10.08 s
+Training FLOPs / record   : ~46,464  (6 x MACs, forward + backward)
+Inference latency (CPU)   : 1.59 us/record (batch 4096), 249.7 us/record (batch 1, includes PyTorch call overhead)

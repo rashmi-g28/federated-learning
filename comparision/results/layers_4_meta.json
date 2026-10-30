@@ -1,0 +1,75 @@
+{
+  "family": 4,
+  "fingerprint": "30351adbfb3cf316",
+  "n_features": 115,
+  "settings": {
+    "train_frac": 0.8,
+    "threshold_frac": 0.1,
+    "shuffle_split": false,
+    "val_frac": 0.05,
+    "max_attack_per_file": 100000,
+    "epochs": 100,
+    "batch_size": 2048,
+    "lr": 0.0001,
+    "scaler": "minmax",
+    "if_contamination": 0.01,
+    "data_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "variants": {
+    "4A": {
+      "hidden": [
+        64,
+        12,
+        12,
+        64
+      ],
+      "why": "Symmetric, narrow middle (12-12). The 'even' layout: no single bottleneck layer, a 2-layer code."
+    },
+    "4B": {
+      "hidden": [
+        64,
+        24,
+        24,
+        64
+      ],
+      "why": "Symmetric, wide middle (24-24) -> tests whether a wider code helps when the net has no single bottleneck."
+    },
+    "4C": {
+      "hidden": [
+        64,
+        24,
+        6,
+        24
+      ],
+      "why": "ASYMMETRIC, keeps the paper's 6-neuron bottleneck (encoder 64-24-6, light 1-layer decoder) -> does a true bottleneck matter at 4 layers?"
+    },
+    "4D": {
+      "hidden": [
+        32,
+        12,
+        12,
+        32
+      ],
+      "why": "LIGHTWEIGHT symmetric -> smallest 4-layer model."
+    }
+  },
+  "n_normal_test": 111188,
+  "attack_files": [
+    "Mirai/ack",
+    "Mirai/scan",
+    "Mirai/syn",
+    "Mirai/udp",
+    "Mirai/udpplain",
+    "Gafgyt/combo",
+    "Gafgyt/junk",
+    "Gafgyt/scan",
+    "Gafgyt/tcp",
+    "Gafgyt/udp"
+  ],
+  "device": "cpu"
+}

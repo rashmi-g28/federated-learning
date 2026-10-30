@@ -1,0 +1,71 @@
+{
+  "family": 3,
+  "fingerprint": "30351adbfb3cf316",
+  "n_features": 115,
+  "settings": {
+    "train_frac": 0.8,
+    "threshold_frac": 0.1,
+    "shuffle_split": false,
+    "val_frac": 0.05,
+    "max_attack_per_file": 100000,
+    "epochs": 100,
+    "batch_size": 2048,
+    "lr": 0.0001,
+    "scaler": "minmax",
+    "if_contamination": 0.01,
+    "data_seed": 42,
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "variants": {
+    "3A": {
+      "hidden": [
+        48,
+        6,
+        48
+      ],
+      "why": "Paper Config A. Baseline. Paper: great per-device, but collapses all-in-one (recall 0.35-0.79) -> check whether it also collapses on your merged data."
+    },
+    "3B": {
+      "hidden": [
+        64,
+        6,
+        64
+      ],
+      "why": "Paper Config B. Baseline. Same 6-neuron bottleneck, wider -> isolates the effect of width."
+    },
+    "3C": {
+      "hidden": [
+        32,
+        6,
+        32
+      ],
+      "why": "LIGHTWEIGHT. Half the width of 3B, same bottleneck -> how much accuracy do we pay for a smaller FL payload?"
+    },
+    "3D": {
+      "hidden": [
+        64,
+        12,
+        64
+      ],
+      "why": "BOTTLENECK WIDTH. 3B with a 12-neuron code instead of 6 -> is the 6-neuron bottleneck too tight for merged multi-device traffic?"
+    }
+  },
+  "n_normal_test": 111188,
+  "attack_files": [
+    "Mirai/ack",
+    "Mirai/scan",
+    "Mirai/syn",
+    "Mirai/udp",
+    "Mirai/udpplain",
+    "Gafgyt/combo",
+    "Gafgyt/junk",
+    "Gafgyt/scan",
+    "Gafgyt/tcp",
+    "Gafgyt/udp"
+  ],
+  "device": "cpu"
+}
